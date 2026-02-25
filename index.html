@@ -14,6 +14,16 @@
     <header class="header-with-logo">
         <img src="images/hp.png" alt="Site Logo" class="logo">
         <span>Special Education Project Demo – New Mexico Inspired</span>
+
+        <nav class="nav">
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="nm-curve"></div>
@@ -30,7 +40,51 @@
         </div>
 
         <a href="#" class="button">Learn More</a>
+
+        <div class="friendly-box">
+            <p>This is a friendly info box styled from your CSS file.</p>
+        </div>
+
+        <a href="#" class="button">Learn More</a>
+
+        <div class="friendly-box">
+            <p>This is a friendly info box styled from your CSS file.</p>
+        </div>
+
+        <a href="#" class="button">Learn More</a>
+
+        <div class="submit-box">
+            <h3>Send Us a Message</h3>
+
+            <form>
+                <label for="userInput">Your Message:</label>
+                <input type="text" id="userInput" name="userInput" placeholder="Type something...">
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+
+        <div class="friendly-box">
+            <p>Want to explore more gaming content?</p>
+            <a href="https://www.playstation.com" class="button" target="_blank">
+                Visit PlayStation
+            </a>
+        </div>
+
+        <div class="friendly-box">
+            <p>Ready to finish up?</p>
+            <a href="exit.html" class="button">Save & Exit</a>
+        </div>
     </div>
 
+    <script>
+        // JavaScript for hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
