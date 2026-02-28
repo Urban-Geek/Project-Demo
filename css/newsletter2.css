@@ -1,0 +1,224 @@
+html {
+  background: #F7E6C8;
+}
+
+body {
+  margin: 0;
+  font-family: "Baloo 2", Arial, sans-serif;
+  color: #4B2E2E;
+  overflow-x: hidden;
+}
+
+/* ==========================================================
+   BACKGROUND DECORATIONS (playful version)
+========================================================== */
+
+/* Container for doodles & shapes */
+.bg-decor {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+}
+
+/* Color blobs */
+.bg-decor::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -80px;
+  width: 380px;
+  height: 380px;
+  background: #8FBF4D; /* saturated sage */
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: blob1 6s ease-in-out infinite alternate;
+}
+
+.bg-decor::after {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  right: -120px;
+  width: 430px;
+  height: 430px;
+  background: #C45D30; /* adobe orange */
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: blob2 7s ease-in-out infinite alternate;
+}
+
+/* Sunburst behind header */
+.header::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, #FFE48A 0%, #F7C042 50%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.55;
+}
+
+/* Doodles (stars, swirls, dots, arrows) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  width: 140px;
+  height: 140px;
+  background-image: url("data:image/svg+xml;utf8,<svg width='140' height='140' xmlns='http://www.w3.org/2000/svg'><path d='M20 30 Q40 10 60 30 T100 30' stroke='%238B2F2F' stroke-width='6' fill='none'/><circle cx='70' cy='80' r='12' stroke='%23A0522D' stroke-width='5' fill='none'/><path d='M40 100 L90 120' stroke='%238FBF4D' stroke-width='6'/></svg>");
+  background-size: contain;
+  opacity: 0.4;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+  width: 160px;
+  height: 160px;
+  background-image: url("data:image/svg+xml;utf8,<svg width='160' height='160' xmlns='http://www.w3.org/2000/svg'><path d='M20 140 L70 100 L120 140' stroke='%238B2F2F' stroke-width='7' fill='none'/><circle cx='80' cy='50' r='18' stroke='%23C45D30' stroke-width='6' fill='none'/><path d='M30 40 Q30 10 60 20' stroke='%238FBF4D' stroke-width='6' fill='none'/></svg>");
+  background-size: contain;
+  opacity: 0.4;
+}
+
+@keyframes blob1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+@keyframes blob2 {
+  0% { transform: translateY(10px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* ==========================================================
+   CARD CONTAINER
+========================================================== */
+
+.newsletter {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #FFF8ED;
+  border-radius: 28px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 10;
+}
+
+/* Fake tape corners */
+.newsletter::after,
+.newsletter::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  background: #F7D88B;
+  top: -15px;
+  transform: rotate(-6deg);
+  left: 40px;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+
+.newsletter::before {
+  right: 40px;
+  left: auto;
+  transform: rotate(6deg);
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header {
+  text-align: center;
+  position: relative;
+  padding: 2.5rem 1rem;
+  background: #8B2F2F;
+  border-radius: 22px;
+  overflow: hidden;
+  color: #FFF8ED;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+}
+
+.subtitle {
+  margin-top: 0.6rem;
+  color: #F5E9D3;
+}
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+.section {
+  background: #F5E0C5;
+  padding: 1.6rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 3px solid #8B2F2F;
+}
+
+.section.purple {
+  background: #D8EBC4;
+}
+
+.section.highlight {
+  background: #F0C2A5;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #8B2F2F;
+}
+
+/* Doodle sticker on sections */
+.section::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><circle cx='25' cy='25' r='22' fill='%23FFE48A' stroke='%23C45D30' stroke-width='5'/></svg>");
+  background-size: contain;
+}
+
+/* ==========================================================
+   TWO COLUMNS
+========================================================== */
+
+.two-col {
+  display: flex;
+  gap: 1rem;
+}
+
+.two-col div {
+  background: #FFF8ED;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 2px dashed #A0522D;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+  color: #8B2F2F;
+}

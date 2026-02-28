@@ -1,171 +1,742 @@
-/* --------------------------------------------------
-   PAGE BACKGROUND (Southwest Sandstone)
--------------------------------------------------- */
+/* ============================================================
+   NEWSLETTER.CSS
+   NM Special Education — Issue 1, February 2026
+   Original styles PRESERVED + fun animations added
+============================================================ */
+
 html {
-  background: #F5E9D3; /* sandstone beige */
+  background: #F7E6C8;
 }
 
 body {
-  background: transparent;
   margin: 0;
-  font-family: "Poppins", Arial, sans-serif;
-  color: #4B2E2E; /* deep earthy brown */
+  font-family: "Baloo 2", Arial, sans-serif;
+  color: #4B2E2E;
+  overflow-x: hidden;
 }
 
-/* --------------------------------------------------
-   DECORATIVE SOUTHWEST SHAPES
--------------------------------------------------- */
-
-/* Soft circles behind the page */
-html::before,
-html::after {
-  content: "";
+/* ============================================================
+   FLOATING STARS CONTAINER (filled by JS)
+============================================================ */
+.stars-container {
   position: fixed;
-  z-index: -1;
-  border-radius: 50%;
-  opacity: 0.25;
-}
-
-/* Top-left sage green circle */
-html::before {
-  width: 320px;
-  height: 320px;
-  background: #6B8E23; /* sage */
-  top: -100px;
-  left: -80px;
-}
-
-/* Bottom-right adobe clay circle */
-html::after {
-  width: 380px;
-  height: 380px;
-  background: #A0522D; /* adobe brown */
-  bottom: -120px;
-  right: -100px;
-}
-
-/* --------------------------------------------------
-   NEWSLETTER CONTAINER
--------------------------------------------------- */
-.newsletter {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #FFF8ED; /* soft cream */
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* --------------------------------------------------
-   HEADER WITH WAVY BOTTOM
--------------------------------------------------- */
-.header {
-  text-align: center;
-  background: #8B2F2F; /* muted chili red */
-  padding: 2rem 1rem;
-  border-radius: 20px;
-  margin-bottom: 1.5rem;
-  position: relative;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
   overflow: hidden;
 }
 
-/* Wavy bottom edge */
-.header::after {
+.star {
+  position: absolute;
+  animation: floatStar linear infinite;
+  opacity: 0;
+}
+
+@keyframes floatStar {
+  0%   { transform: translateY(100vh) rotate(0deg);    opacity: 0; }
+  10%  { opacity: 0.75; }
+  90%  { opacity: 0.5;  }
+  100% { transform: translateY(-10vh) rotate(360deg);  opacity: 0; }
+}
+
+/* ============================================================
+   BACKGROUND DECORATIONS — original
+============================================================ */
+.bg-decor {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+}
+
+.bg-decor::before {
   content: "";
   position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 100%;
-  height: 60px;
+  top: -120px;
+  left: -80px;
+  width: 380px;
+  height: 380px;
+  background: #8FBF4D;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: blob1 6s ease-in-out infinite alternate;
+}
+
+.bg-decor::after {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  right: -120px;
+  width: 430px;
+  height: 430px;
+  background: #C45D30;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: blob2 7s ease-in-out infinite alternate;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, #FFE48A 0%, #F7C042 50%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.55;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  width: 140px;
+  height: 140px;
+  background-image: url("data:image/svg+xml;utf8,<svg width='140' height='140' xmlns='http://www.w3.org/2000/svg'><path d='M20 30 Q40 10 60 30 T100 30' stroke='%238B2F2F' stroke-width='6' fill='none'/><circle cx='70' cy='80' r='12' stroke='%23A0522D' stroke-width='5' fill='none'/><path d='M40 100 L90 120' stroke='%238FBF4D' stroke-width='6'/></svg>");
+  background-size: contain;
+  opacity: 0.4;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+  width: 160px;
+  height: 160px;
+  background-image: url("data:image/svg+xml;utf8,<svg width='160' height='160' xmlns='http://www.w3.org/2000/svg'><path d='M20 140 L70 100 L120 140' stroke='%238B2F2F' stroke-width='7' fill='none'/><circle cx='80' cy='50' r='18' stroke='%23C45D30' stroke-width='6' fill='none'/><path d='M30 40 Q30 10 60 20' stroke='%238FBF4D' stroke-width='6' fill='none'/></svg>");
+  background-size: contain;
+  opacity: 0.4;
+}
+
+@keyframes blob1 {
+  0%   { transform: translateY(0);    }
+  100% { transform: translateY(20px); }
+}
+
+@keyframes blob2 {
+  0%   { transform: translateY(10px);  }
+  100% { transform: translateY(-10px); }
+}
+
+/* ============================================================
+   NEWSLETTER CARD — original + unchanged
+============================================================ */
+.newsletter {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #FFF8ED;
+  border-radius: 28px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 10;
+}
+
+/* Tape corners — original */
+.newsletter::after,
+.newsletter::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  background: #F7D88B;
+  top: -15px;
+  transform: rotate(-6deg);
+  left: 40px;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+
+.newsletter::before {
+  right: 40px;
+  left: auto;
+  transform: rotate(6deg);
+}
+
+/* ============================================================
+   HEADER — original + badge + shimmer
+============================================================ */
+.header {
+  text-align: center;
+  position: relative;
+  padding: 2.5rem 1rem;
   background: #8B2F2F;
-  border-bottom-left-radius: 50% 40px;
-  border-bottom-right-radius: 50% 40px;
+  border-radius: 22px;
+  overflow: hidden;
+  color: #FFF8ED;
+  margin-bottom: 1.5rem;
 }
 
 .header h1 {
   margin: 0;
-  font-size: 2.2rem;
-  color: #FFF8ED; /* cream text */
-  font-weight: 700;
+  font-size: 3.0rem;
 }
 
 .subtitle {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #F5E9D3; /* sandstone */
+  margin-top: 0.6rem;
+  color: #F5E9D3;
 }
 
-/* --------------------------------------------------
-   SECTIONS
--------------------------------------------------- */
+/* Issue badge */
+.header-badge {
+  display: inline-block;
+  background: #FFE48A;
+  color: #8B2F2F;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 4px 18px;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  animation: badgePop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes badgePop {
+  0%   { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Rainbow shimmer on h1 */
+@keyframes shimmer {
+  0%   { background-position: -400% center; }
+  100% { background-position: 400% center;  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    100deg,
+    #FFF8ED 15%,
+    #FFE48A 30%,
+    #FFF8ED 42%,
+    #F7C042 55%,
+    #FFF8ED 68%,
+    #FFE48A 80%,
+    #FFF8ED 95%
+  );
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ============================================================
+   SECTIONS — original + hover lift effect
+============================================================ */
 .section {
-  background: #F5E9D3; /* sandstone */
-  padding: 1.5rem;
-  border-radius: 16px;
+  background: #F5E0C5;
+  padding: 1.6rem;
+  border-radius: 20px;
   margin-bottom: 1.5rem;
   position: relative;
+  border: 3px solid #8B2F2F;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.section:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(139, 47, 47, 0.2);
+}
+
+.section.purple    { background: #D8EBC4; }
+.section.highlight { background: #F0C2A5; }
 
 .section h2 {
   margin-top: 0;
-  color: #8B2F2F; /* chili red */
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: #8B2F2F;
 }
 
-/* Purple section → Sage section */
-.section.purple {
-  background: #DDE7C7; /* pale sage */
-}
-
-/* Highlight section → Adobe highlight */
-.section.highlight {
-  background: #E6C3A3; /* adobe sand */
-}
-
-/* --------------------------------------------------
-   DOTTED ACCENTS (earthy brown)
--------------------------------------------------- */
+/* Doodle sticker — original + gentle pulse */
 .section::before {
   content: "";
   position: absolute;
-  width: 80px;
-  height: 80px;
-  background-image: radial-gradient(#4B2E2E 2px, transparent 2px);
-  background-size: 12px 12px;
-  opacity: 0.15;
-  top: -20px;
-  right: -20px;
-  border-radius: 50%;
+  top: -18px;
+  left: -18px;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><circle cx='25' cy='25' r='22' fill='%23FFE48A' stroke='%23C45D30' stroke-width='5'/></svg>");
+  background-size: contain;
+  animation: pulseDot 3s ease-in-out infinite;
 }
 
-/* --------------------------------------------------
-   TWO-COLUMN LAYOUT
--------------------------------------------------- */
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1);    }
+  50%       { transform: scale(1.18); }
+}
+
+/* Section intro / lead text */
+.section-intro {
+  color: #6B3D1E;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #C45D30;
+  padding-left: 12px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ANIMATE-IN — sections slide up on scroll
+============================================================ */
+.animate-in {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   GRADE LEVEL BADGES
+============================================================ */
+.grade-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  animation: badgePop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.badge-green  { background: #5EA832; color: #fff; }
+.badge-purple { background: #7B5EA7; color: #fff; }
+
+/* ============================================================
+   EVENT CARDS
+============================================================ */
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.event-card {
+  border-radius: 22px;
+  padding: 1.4rem 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+/* Decorative bubble inside cards */
+.event-card::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -25%;
+  width: 150px;
+  height: 150px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.event-card:hover {
+  transform: translateY(-10px) rotate(-1.5deg) scale(1.03);
+  box-shadow: 0 22px 48px rgba(0,0,0,0.3);
+}
+
+.card-teal   { background: linear-gradient(135deg, #2BAE83, #1D8F6A); }
+.card-orange { background: linear-gradient(135deg, #E8762F, #C45D30); }
+.card-maroon { background: linear-gradient(135deg, #A93030, #8B2F2F); }
+
+.event-emoji {
+  font-size: 2.6rem;
+  display: block;
+  margin-bottom: 0.4rem;
+  animation: wiggle 2.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg);  }
+  25%       { transform: rotate(-9deg); }
+  75%       { transform: rotate(9deg);  }
+}
+
+.event-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.event-card p {
+  margin: 0.3rem 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.event-tag {
+  font-size: 0.73rem;
+  background: rgba(255,255,255,0.22);
+  padding: 2px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.event-meta {
+  font-size: 0.8rem;
+  background: rgba(0,0,0,0.18);
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+
+.event-cta {
+  margin-top: 0.8rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  background: rgba(255,255,255,0.28);
+  padding: 6px 14px;
+  border-radius: 14px;
+  display: inline-block;
+}
+
+/* ============================================================
+   SCHOLARSHIP CARDS
+============================================================ */
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.scholarship-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.4rem;
+  border: 3px solid #C45D30;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Shine sweep on hover */
+.scholarship-card::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 228, 138, 0.55),
+    transparent
+  );
+  transform: skewX(-20deg) translateX(-100%);
+  transition: transform 0.55s ease;
+}
+
+.scholarship-card:hover::after {
+  transform: skewX(-20deg) translateX(400%);
+}
+
+.scholarship-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 34px rgba(196,93,48,0.28);
+}
+
+.s-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.scholarship-card h3 {
+  color: #8B2F2F;
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.scholarship-card p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0 0 0.6rem;
+}
+
+.deadline {
+  font-size: 0.78rem;
+  background: #FFE48A;
+  color: #7A2A2A;
+  padding: 4px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0.4rem 0 0.6rem;
+  font-weight: 700;
+}
+
+.s-btn {
+  display: inline-block;
+  background: #8B2F2F;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.s-btn:hover {
+  background: #C45D30;
+  transform: scale(1.06) rotate(-1deg);
+}
+
+.info-note {
+  background: #FFF3C4;
+  border-left: 5px solid #C45D30;
+  padding: 0.85rem 1.2rem;
+  border-radius: 12px;
+  margin-top: 1.4rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   VIDEO WINDOWS — macOS-style frames
+============================================================ */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin: 1rem 0 1.6rem;
+}
+
+.video-window {
+  background: #1e1e2e;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid #444;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+
+.video-window.wobble-hover:hover {
+  transform: scale(1.045) rotate(-1.5deg);
+  box-shadow: 0 24px 55px rgba(0,0,0,0.5);
+}
+
+/* Top bar — like a browser/app window */
+.video-top-bar {
+  background: #2d2d3e;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.video-label {
+  color: #aaa;
+  font-size: 0.74rem;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+/* YouTube iframes */
+.video-window iframe {
+  width: 100%;
+  height: 215px;
+  border: none;
+  display: block;
+}
+
+/* PBS / link-only placeholder card */
+.pbs-card {
+  background: linear-gradient(135deg, #1a3a6e, #2563a8);
+  min-height: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+  gap: 0.75rem;
+}
+
+.pbs-big-icon {
+  font-size: 3rem;
+  animation: bouncePBS 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes bouncePBS {
+  0%   { transform: translateY(0);     }
+  100% { transform: translateY(-12px); }
+}
+
+.pbs-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pbs-link-btn {
+  display: inline-block;
+  background: #FFE48A;
+  color: #1a3a6e;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pbs-link-btn:hover {
+  background: #fff;
+  transform: scale(1.07) rotate(1deg);
+}
+
+/* Caption bar below video */
+.video-caption {
+  background: #2d2d3e;
+  color: #dde0ff;
+  text-align: center;
+  padding: 7px 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+/* ============================================================
+   COMING SOON BOX
+============================================================ */
+.coming-soon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255,255,255,0.6);
+  border: 3px dashed #A0522D;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.coming-soon-icon {
+  font-size: 2.6rem;
+  flex-shrink: 0;
+  animation: sway 1.8s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-12deg); }
+  50%       { transform: rotate(12deg);  }
+}
+
+/* ============================================================
+   TWO COLUMNS — original + hover
+============================================================ */
 .two-col {
   display: flex;
   gap: 1rem;
 }
 
 .two-col div {
-  flex: 1;
   background: #FFF8ED;
   padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 18px;
+  border: 2px dashed #A0522D;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.two-col h3 {
-  margin-top: 0;
-  color: #8B2F2F;
+.two-col div:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(160,82,45,0.22);
 }
 
-/* --------------------------------------------------
+/* ============================================================
    FOOTER
--------------------------------------------------- */
+============================================================ */
 .footer {
   text-align: center;
   margin-top: 2rem;
+  font-weight: 700;
   color: #8B2F2F;
+  padding: 1rem;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+}
+
+.footer-stars {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  display: block;
+  animation: footerFloat 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes footerFloat {
+  0%   { transform: translateY(0);    }
+  100% { transform: translateY(-6px); }
+}
+
+.footer-sub {
+  font-size: 0.8rem;
+  color: #A0522D;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 620px) {
+  .newsletter {
+    margin: 1rem;
+    padding: 1.4rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .event-cards,
+  .scholarship-grid,
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sub-title under main header title */
+.header-sub-title {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  color: #F5E9D3;
+  letter-spacing: 0.03em;
 }

@@ -1,0 +1,98 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #fdfbf4;
+  color: #333;
+}
+
+.newsletter {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background: #f7d34a;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #4b2e83;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #4b2e83;
+}
+
+/* Sections */
+.section {
+  background: #fff7d1;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #4b2e83;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.section ul {
+  padding-left: 1.2rem;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Purple section */
+.section.purple {
+  background: #e8d9ff;
+}
+
+/* Highlight section (yellow) */
+.section.highlight {
+  background: #ffe98a;
+}
+
+/* Two-column layout */
+.two-col {
+  display: flex;
+  gap: 1rem;
+}
+
+.two-col div {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.two-col h3 {
+  margin-top: 0;
+  color: #4b2e83;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #4b2e83;
+  font-weight: 600;
+}

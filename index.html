@@ -1,52 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Classroom Newsletter</title>
-  <link rel="stylesheet" href="css/newsletter.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>It's All Your IDEA!!</title>
+  <link rel="stylesheet" href="css/newsletter.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <div class="bg-decor"></div>
+  <div class="stars-container" id="starsContainer"></div>
+
   <div class="newsletter">
 
-    <header class="header">
-      <h1>Classroom Newsletter</h1>
-      <p class="subtitle">Ms. Smith • 5th Grade • February</p>
-    </header>
+    <!-- ══════════════ HEADER ══════════════ -->
+    <div class="header">
+      <div class="header-badge">✨ Issue 1 • February 2026 ✨</div>
+      <h1 class="shimmer-text">It's All Your IDEA!!</h1>
+      <p class="header-sub-title">New Mexico Special Education Newsletter</p>
+      <p class="subtitle">Resources • Events • Support</p>
+    </div>
 
-    <section class="section highlight">
-      <h2>Important Announcements</h2>
-      <ul>
-        <li>Field trip this Friday — permission slips due!</li>
-        <li>Math test on Monday (fractions + decimals).</li>
-        <li>Spirit Day next week — wear school colors!</li>
-      </ul>
-    </section>
+    <!-- ══════════════ COMMUNITY EVENTS ══════════════ -->
+    <div class="section purple animate-in">
+      <h2>🎉 Upcoming Community Events</h2>
+      <p class="section-intro">
+        February's Recommendations — fun and meaningful events happening right here in New Mexico!
+      </p>
 
-    <section class="section">
-      <h2>What We’re Learning</h2>
-      <div class="two-col">
-        <div>
-          <h3>Reading</h3>
-          <p>Identifying theme, summarizing chapters, and vocabulary practice.</p>
+      <div class="event-cards">
+
+        <a href="https://www.nmfinder.org/events" target="_blank" class="event-card card-teal">
+          <span class="event-emoji">🧩</span>
+          <h3>PEACE</h3>
+          <span class="event-tag">Virtual / In-Person</span>
+          <p><strong>Parent Education about Autism &amp; Caregiver Empowerment</strong></p>
+          <p>An informational series for parents &amp; caregivers of children on the autism spectrum — a supportive space to learn and connect.</p>
+          <div class="event-meta">🗓 Feb 2, 2026 &nbsp;|&nbsp; ⏰ 11 AM–12:30 PM</div>
+          <div class="event-cta">Click to Register →</div>
+        </a>
+
+        <a href="https://redriver.org/events/mardi-gras-in-the-mountains/" target="_blank" class="event-card card-orange">
+          <span class="event-emoji">🎭</span>
+          <h3>Mardi Gras in the Mountains</h3>
+          <span class="event-tag">Red River, NM</span>
+          <p>Parade, music, food, and family-friendly festivities in a small mountain town — fun for kids and adults alike!</p>
+          <div class="event-meta">🗓 Feb 12–17, 2026</div>
+          <div class="event-cta">Learn More →</div>
+        </a>
+
+        <a href="https://www.cabq.gov/artsculture/albuquerque-museum/events/museum-events/family-day-museum-mash-up" target="_blank" class="event-card card-maroon">
+          <span class="event-emoji">🏛️</span>
+          <h3>Albuquerque Museum</h3>
+          <span class="event-tag">Family Day — Museum Mash-Up!</span>
+          <p>Open family events at the Albuquerque Museum — creative, educational, and totally fun for the whole family!</p>
+          <div class="event-meta">🗓 Open Events</div>
+          <div class="event-cta">See Events →</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ══════════════ SCHOLARSHIPS ══════════════ -->
+    <div class="section animate-in">
+      <h2>🎓 Scholarships &amp; Funding for Students</h2>
+      <p class="section-intro">
+        February's Recommendations — amazing scholarship opportunities for students with disabilities and their families!
+      </p>
+
+      <div class="scholarship-grid">
+
+        <div class="scholarship-card">
+          <div class="s-icon">💛</div>
+          <h3>Anne Ford Scholarship</h3>
+          <p>A <strong>$10,000 scholarship</strong> ($2,500/year over 4 years) for graduating high school seniors with a documented learning disability (LD). Students with ADHD who also have an LD are encouraged to apply. Must enroll in a full-time bachelor's degree program.</p>
+          <div class="deadline">📅 Rolling Deadline: April 26, 2026</div>
+          <a href="https://ncld.org/scholarships-awards/anne-ford-scholarship/" target="_blank" class="s-btn">Apply Now ✨</a>
         </div>
+
+        <div class="scholarship-card">
+          <div class="s-icon">🎰</div>
+          <h3>NM Lottery Scholarship</h3>
+          <p>New Mexico's first tuition-free scholarship program — covers <strong>100% of tuition</strong> for recent high school graduates. A great opportunity for students heading straight to college!</p>
+          <a href="https://www.reachhighernm.com/recent-high-school-graduate/" target="_blank" class="s-btn">Learn More ✨</a>
+        </div>
+
+        <div class="scholarship-card">
+          <div class="s-icon">🌟</div>
+          <h3>NM Opportunity Scholarship</h3>
+          <p>For students starting college later in life or returning after years away. Works for <strong>part-time or full-time</strong> students pursuing a degree or career training certificate.</p>
+          <a href="https://www.reachhighernm.com/returning-students/" target="_blank" class="s-btn">Learn More ✨</a>
+        </div>
+
+        <div class="scholarship-card">
+          <div class="s-icon">💙</div>
+          <h3>Wells Fargo Stacey Milbern Scholarship</h3>
+          <p>Designed to help <strong>students with disabilities</strong> pursue the education or training they need to succeed in their chosen career path.</p>
+          <a href="https://www.scholarships.com/scholarships/wells-fargo-stacey-milbern-scholarship" target="_blank" class="s-btn">Apply Now ✨</a>
+        </div>
+
+      </div>
+
+      <div class="info-note">
+        📊 <strong>Note:</strong> Data can be collected on behalf of the office for students who have applied and were awarded scholarships through this newsletter.
+      </div>
+    </div>
+
+    <!-- ══════════════ PRE-K – ELEMENTARY ══════════════ -->
+    <div class="section highlight animate-in">
+      <div class="grade-badge badge-green">🍎 Pre-K – Elementary</div>
+
+      <!-- Topic 1 -->
+      <h2>💕 Friendship, Belonging &amp; Inclusion</h2>
+      <p class="section-intro">
+        <strong>Valentine's Month!</strong> February often brings classroom conversations about friendship. For children with disabilities, this is a key time to support peer relationships, social skills, and inclusion — especially for students who may feel left out or misunderstood.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Friendship &amp; Inclusion</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/rvL4clmNQXQ"
+            title="Friendship and Inclusion"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">💛 Friendship &amp; Inclusion</div>
+        </div>
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">📺 PBS Kids</span>
+          </div>
+          <div class="pbs-card">
+            <div class="pbs-big-icon">📺</div>
+            <p><strong>Standing Up for Yourself &amp; Your Friends</strong></p>
+            <a href="https://www.pbs.org/video/standing-up-for-yourself-and-your-friends-zve4ma/"
+               target="_blank" class="pbs-link-btn">Watch on PBS Kids →</a>
+          </div>
+          <div class="video-caption">🦸 Standing Up for Friends</div>
+        </div>
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">📺 PBS Kids</span>
+          </div>
+          <div class="pbs-card">
+            <div class="pbs-big-icon">📺</div>
+            <p><strong>Friendship</strong></p>
+            <a href="https://www.pbs.org/video/friendship-hpdtp3/"
+               target="_blank" class="pbs-link-btn">Watch on PBS Kids →</a>
+          </div>
+          <div class="video-caption">🤝 All About Friendship</div>
+        </div>
+
+      </div>
+
+      <!-- Topic 2 -->
+      <h2>🧠 Understanding Feelings &amp; Self-Regulation</h2>
+      <p class="section-intro">
+        Winter months and schedule changes can increase emotional dysregulation — especially for young children with sensory, communication, or emotional needs.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Understanding Feelings</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/ZxfJicfyCdg"
+            title="Understanding Feelings"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">😊 Understanding Feelings</div>
+        </div>
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Self-Regulation</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/bRkILioT_NA"
+            title="Self-Regulation"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">🌈 Self-Regulation Tools</div>
+        </div>
+
+      </div>
+
+      <!-- Topic 3 -->
+      <h2>🌻 Learning Differences &amp; Strengths Awareness</h2>
+      <p class="section-intro">
+        February is a great time to normalize that everyone learns differently — helping children with disabilities develop a positive self-identity early on.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Learning Differences</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/uSrA2c46l_U"
+            title="Learning Differences and Strengths"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">🌟 Everyone Learns Differently</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════ MIDDLE SCHOOL ══════════════ -->
+    <div class="section purple animate-in">
+      <div class="grade-badge badge-purple">🎒 Middle School</div>
+
+      <!-- Topic 1 -->
+      <h2>🗣️ Self-Advocacy &amp; Understanding Supports</h2>
+      <p class="section-intro">
+        Middle school is when students begin taking more responsibility for their learning. February is a good checkpoint to reinforce how and why supports exist — and how to use them appropriately.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Self-Advocacy</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/DJYpe2DOMzk"
+            title="Self-Advocacy"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">💪 Self-Advocacy Skills</div>
+        </div>
+
+      </div>
+
+      <!-- Topic 2 -->
+      <h2>💞 Friendship, Belonging &amp; Social Inclusion</h2>
+      <p class="section-intro">
+        With Valentine's Day and social activities, students may feel pressure around friendships. Students with disabilities may struggle with social cues, peer acceptance, or confidence.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Social Inclusion</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/vRv7GAkfj4w"
+            title="Friendship and Social Inclusion"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">🤝 Belonging &amp; Inclusion</div>
+        </div>
+
+      </div>
+
+      <!-- Topic 3 -->
+      <h2>😤 Stress, Anxiety &amp; Emotional Regulation</h2>
+      <p class="section-intro">
+        Winter fatigue, academic pressure, and social stress can increase anxiety and emotional overload — especially for students with disabilities.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Stress &amp; Anxiety</span>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/jGMjqIIMxNA"
+            title="Stress and Anxiety"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <div class="video-caption">🧘 Managing Stress &amp; Anxiety</div>
+        </div>
+
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🧠 Mindfulness Article</span>
+          </div>
+          <div class="pbs-card">
+            <div class="pbs-big-icon">🧘</div>
+            <p><strong>Mindfulness Practices to Help Kids Calm Down</strong></p>
+            <a href="https://leftbrainbuddha.com/mindfulness-practices-to-help-kids-calm-down/"
+               target="_blank" class="pbs-link-btn">Read Article →</a>
+          </div>
+          <div class="video-caption">🌸 Mindfulness for Kids</div>
+        </div>
+
+      </div>
+
+      <!-- Topic 4 -->
+      <h2>📱 Safety Concerns with Technology</h2>
+      <p class="section-intro">
+        This section is growing! Apps, books, and digital safety tips will be added here soon to support students and families.
+      </p>
+
+      <div class="coming-soon">
+        <span class="coming-soon-icon">🚧</span>
         <div>
-          <h3>Math</h3>
-          <p>Adding, subtracting, and comparing fractions with unlike denominators.</p>
+          <strong>More Resources Coming Soon!</strong><br>
+          Apps, books, and online safety tips will be added to expand this section in a future issue.
         </div>
       </div>
-    </section>
 
-    <section class="section purple">
-      <h2>Student Shout‑Outs</h2>
-      <p>⭐ Great teamwork during group projects this week!</p>
-      <p>⭐ Amazing effort on reading logs — keep it up!</p>
-    </section>
+    </div>
 
-    <footer class="footer">
-      <p>Contact: ms.smith@school.org</p>
-    </footer>
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <div class="footer">
+      <div class="footer-stars">⭐ 🌵 ⭐ 🌞 ⭐ 🌵 ⭐</div>
+      <p>Thank you for reading — It's All Your IDEA!</p>
+      <p class="footer-sub">New Mexico Special Education Newsletter • Issue 1 • February 2026</p>
+    </div>
 
-  </div>
+  </div><!-- /.newsletter -->
+
+  <script src="js/newsletter.js"></script>
 </body>
 </html>
