@@ -278,6 +278,7 @@ body::after {
   line-height: 1.5;
 }
 
+
 /* ============================================================
    ANIMATE-IN — sections slide up on scroll
 ============================================================ */
@@ -739,6 +740,74 @@ body::after {
   font-weight: 600;
   color: #F5E9D3;
   letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   HIGH SCHOOL SUCCESS HUB — section icon
+============================================================ */
+.section.high-school::before {
+  content: "";
+}
+
+/* ============================================================
+   SCHOLARSHIPS — match Welcome inside-box color safely
+============================================================ */
+.section.scholarships {
+  background: #F0C2A5;
+}
+
+/* ============================================================
+   GRADE PILLS — temporarily hidden (code preserved)
+============================================================ */
+.grade-badge {
+  display: none;
+}
+
+/* ============================================================
+   SECTION CIRCLE ICONS — feature‑toggled
+   Turn on by adding `.circle-icons-on` to <body>
+============================================================ */
+
+.circle-icons-on .section::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Welcome */
+.circle-icons-on .section.highlight::before {
+  content: "🏡";
+}
+
+/* Alex Shares */
+.circle-icons-on .section.alex-shares::before {
+  content: "📣";
+}
+
+/* Community Events */
+.circle-icons-on .section.events::before {
+  content: "📅";
+}
+
+/* Scholarships */
+.circle-icons-on .section.scholarships::before {
+  content: "💼";
+}
+
+/* High School */
+.circle-icons-on .section.high-school::before {
+  content: "🎓";
+}
+
+/* Middle School */
+.circle-icons-on .section.middle-school::before {
+  content: "🎒";
+}
+
+/* Pre‑K / Super Learners */
+.circle-icons-on .section.super-learners::before {
+  content: "🦸";
 }
 
 /* ============================================================

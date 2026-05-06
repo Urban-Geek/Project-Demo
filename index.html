@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/newsletter.css" />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="circle-icons-on">
 
   <div class="bg-decor"></div>
   <div class="stars-container" id="starsContainer"></div>
@@ -22,40 +22,130 @@
       <p class="subtitle">Resources • Events • Support</p>
     </div>
 
+    <!-- ================= WELCOME ================= -->
+    <div class="section highlight animate-in" style="--section-icon: '🏡';">
+      <h2>🏡 Welcome!</h2>
+      <p class="section-intro">
+        This page is here to support you throughout your educational journey.
+        Whether you're in elementary school, middle school, or high school,
+        you have strengths, supports, and a future full of possibilities.
+      </p>
+
+      <p>
+        <strong>Your accommodations are tools.</strong><br>
+        <strong>Your voice matters.</strong><br>
+        <strong>You belong here.</strong>
+      </p>
+    </div>
+
+    <!-- ================= ALEX SHARES ================= -->
+    <div class="section alex-shares animate-in" style="--section-icon: '📣';">
+      <h2>📣 Alex Shares!</h2>
+
+      <p class="section-intro">
+        Sometimes it helps to hear from someone who understands what school can feel like.
+      </p>
+
+      <p>
+        Meet <strong>Alex</strong>. In this video, he shares his story, the challenges he faced,
+        and how he learned to use his strengths and supports to succeed.
+      </p>
+
+      <div class="video-grid">
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Alex’s Story</span>
+          </div>
+
+          <iframe
+            src="https://www.youtube.com/embed/mwRnPF_NPbk?start=63"
+            title="Alex Shares His Story"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+
+          <div class="video-caption">
+            Hearing from someone who understands
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ══════════════ COMMUNITY EVENTS ══════════════ -->
     <div class="section purple animate-in">
-      <h2>🎉 Upcoming Community Events</h2>
+      <h2>🗓️ Upcoming Community Events</h2>
+
       <p class="section-intro">
-        February's Recommendations — fun and meaningful events happening right here in New Mexico!
+        Community events are a great way to feel connected beyond the classroom.
+        They bring students, families, and staff together to celebrate learning,
+        culture, talents, and achievements.
       </p>
+
+      <p>
+        For students with disabilities, community events also create opportunities
+        to build confidence, practice social skills, and discover new interests.
+        Whether it’s a school showcase, an awareness event, a family night,
+        a club meeting, or a volunteer opportunity, these experiences help
+        strengthen a sense of belonging and leadership.
+      </p>
+
+      <p>
+        We encourage all students to participate in ways that feel comfortable and meaningful.
+        <strong>Your voice, talents, and presence matter in our community.</strong>
+      </p>
+
+      <p><strong>February’s Recommendations — What’s Happening?</strong></p>
 
       <div class="event-cards">
 
-        <a href="https://www.nmfinder.org/events" target="_blank" class="event-card card-teal">
+        <!-- PEACE -->
+        <a href="https://www.nmfinder.org/events?utm_source=" target="_blank"
+          class="event-card card-teal">
           <span class="event-emoji">🧩</span>
           <h3>PEACE</h3>
-          <span class="event-tag">Virtual / In-Person</span>
-          <p><strong>Parent Education about Autism &amp; Caregiver Empowerment</strong></p>
-          <p>An informational series for parents &amp; caregivers of children on the autism spectrum — a supportive space to learn and connect.</p>
-          <div class="event-meta">🗓 Feb 2, 2026 &nbsp;|&nbsp; ⏰ 11 AM–12:30 PM</div>
-          <div class="event-cta">Click to Register →</div>
-        </a>
-
-        <a href="https://redriver.org/events/mardi-gras-in-the-mountains/" target="_blank" class="event-card card-orange">
-          <span class="event-emoji">🎭</span>
-          <h3>Mardi Gras in the Mountains</h3>
-          <span class="event-tag">Red River, NM</span>
-          <p>Parade, music, food, and family-friendly festivities in a small mountain town — fun for kids and adults alike!</p>
-          <div class="event-meta">🗓 Feb 12–17, 2026</div>
+          <span class="event-tag">Virtual / In‑Person</span>
+          <p>
+            <strong>Parent Education about Autism & Caregiver Empowerment</strong>
+          </p>
+          <p>
+            An informational series for parents and caregivers of children on the autism
+            spectrum — a supportive space to learn and connect.
+          </p>
+          <div class="event-meta">
+            🗓 Feb 2, 2026 &nbsp;|&nbsp; ⏰ 11:00 AM–12:30 PM
+          </div>
           <div class="event-cta">Learn More →</div>
         </a>
 
-        <a href="https://www.cabq.gov/artsculture/albuquerque-museum/events/museum-events/family-day-museum-mash-up" target="_blank" class="event-card card-maroon">
+        <!-- MARDI GRAS -->
+        <a href="https://redriver.org/events/mardi-gras-in-the-mountains/?utm_source="
+          target="_blank" class="event-card card-orange">
+          <span class="event-emoji">🎭</span>
+          <h3>Mardi Gras in the Mountains</h3>
+          <span class="event-tag">Red River, NM</span>
+          <p>
+            Parade, music, food, and family‑friendly festivities in a small
+            mountain town — fun for kids and adults alike!
+          </p>
+          <div class="event-meta">
+            🗓 Feb 12–17, 2026
+          </div>
+          <div class="event-cta">Learn More →</div>
+        </a>
+
+        <!-- ALBUQUERQUE MUSEUM -->
+        <a href="https://www.cabq.gov/artsculture/albuquerque-museum/events/museum-events/family-day-museum-mash-up"
+          target="_blank" class="event-card card-maroon">
           <span class="event-emoji">🏛️</span>
           <h3>Albuquerque Museum</h3>
-          <span class="event-tag">Family Day — Museum Mash-Up!</span>
-          <p>Open family events at the Albuquerque Museum — creative, educational, and totally fun for the whole family!</p>
-          <div class="event-meta">🗓 Open Events</div>
+          <span class="event-tag">Open Events</span>
+          <p>
+            Ongoing family‑friendly events that support creativity, exploration,
+            and learning for students of all ages.
+          </p>
           <div class="event-cta">See Events →</div>
         </a>
 
@@ -63,77 +153,328 @@
     </div>
 
     <!-- ══════════════ SCHOLARSHIPS ══════════════ -->
-    <div class="section animate-in">
-      <h2>🎓 Scholarships &amp; Funding for Students</h2>
+    <div class="section scholarships animate-in" style="--section-icon: '💼';">
+      <h2>💼 Scholarships & Funding for Students</h2>
+    
+    
       <p class="section-intro">
-        February's Recommendations — amazing scholarship opportunities for students with disabilities and their families!
+        Planning for life after high school can feel overwhelming—especially when thinking
+        about how to pay for college, trade school, or certification programs. The good news
+        is that scholarships and funding opportunities are available, including support
+        designed specifically for students with disabilities.
       </p>
-
+    
+      <p>
+        If you have an <strong>IEP or 504 Plan</strong>, you may qualify for state, federal,
+        or community‑based financial support. Some programs offer help with tuition, books,
+        transportation, assistive technology, and career training.
+      </p>
+    
+      <p>
+        Scholarships are not just based on grades. Many recognize leadership, persistence,
+        personal growth, and future goals. Your journey, strengths, and resilience matter.
+      </p>
+    
+      <p>
+        Start early, ask questions, and connect with your school counselor or case manager.
+        There are supports in place to help you take the next step toward your future.
+        <strong>Your education is possible. Your goals are within reach.</strong>
+      </p>
+    
+      <p><strong>February’s Recommendations — Scholarships & Funding</strong></p>
+    
       <div class="scholarship-grid">
-
+    
+        <!-- Anne Ford Scholarship -->
         <div class="scholarship-card">
           <div class="s-icon">💛</div>
           <h3>Anne Ford Scholarship</h3>
-          <p>A <strong>$10,000 scholarship</strong> ($2,500/year over 4 years) for graduating high school seniors with a documented learning disability (LD). Students with ADHD who also have an LD are encouraged to apply. Must enroll in a full-time bachelor's degree program.</p>
-          <div class="deadline">📅 Rolling Deadline: April 26, 2026</div>
-          <a href="https://ncld.org/scholarships-awards/anne-ford-scholarship/" target="_blank" class="s-btn">Apply Now ✨</a>
+          <p>
+            A <strong>$10,000 scholarship</strong> ($2,500 per year for four years) for
+            graduating high school seniors enrolling in a full‑time bachelor’s degree
+            program. Applicants must have a documented learning disability (LD).
+          </p>
+          <p>
+            Students with ADHD and a learning disability are encouraged to apply.
+          </p>
+          <div class="deadline">📅 Deadline: April 26, 2026</div>
+          <a href="https://ncld.org/scholarships-awards/anne-ford-scholarship/" target="_blank" class="s-btn">Apply Now
+            →</a>
         </div>
-
+    
+        <!-- NM Lottery Scholarship -->
         <div class="scholarship-card">
-          <div class="s-icon">🎰</div>
+          <div class="s-icon">🎓</div>
           <h3>NM Lottery Scholarship</h3>
-          <p>New Mexico's first tuition-free scholarship program — covers <strong>100% of tuition</strong> for recent high school graduates. A great opportunity for students heading straight to college!</p>
-          <a href="https://www.reachhighernm.com/recent-high-school-graduate/" target="_blank" class="s-btn">Learn More ✨</a>
+          <p>
+            New Mexico’s first tuition‑free scholarship program, covering
+            <strong>100% of tuition</strong> for recent high school graduates.
+          </p>
+          <a href="https://www.reachhighernm.com/recent-high-school-graduate/" target="_blank" class="s-btn">Learn More
+            →</a>
         </div>
-
+    
+        <!-- NM Opportunity Scholarship -->
         <div class="scholarship-card">
           <div class="s-icon">🌟</div>
           <h3>NM Opportunity Scholarship</h3>
-          <p>For students starting college later in life or returning after years away. Works for <strong>part-time or full-time</strong> students pursuing a degree or career training certificate.</p>
-          <a href="https://www.reachhighernm.com/returning-students/" target="_blank" class="s-btn">Learn More ✨</a>
+          <p>
+            Supports students pursuing college degrees or career training certificates—
+            whether starting for the first time or returning after time away.
+            Available for part‑time or full‑time students.
+          </p>
+          <a href="https://www.reachhighernm.com/returning-students/" target="_blank" class="s-btn">Learn More →</a>
         </div>
-
+    
+        <!-- Wells Fargo Stacey Milbern Scholarship -->
         <div class="scholarship-card">
           <div class="s-icon">💙</div>
           <h3>Wells Fargo Stacey Milbern Scholarship</h3>
-          <p>Designed to help <strong>students with disabilities</strong> pursue the education or training they need to succeed in their chosen career path.</p>
-          <a href="https://www.scholarships.com/scholarships/wells-fargo-stacey-milbern-scholarship" target="_blank" class="s-btn">Apply Now ✨</a>
+          <p>
+            Designed to support students with disabilities pursuing education or
+            career training that aligns with their goals and interests.
+          </p>
+          <a href="https://www.scholarships.com/scholarships/wells-fargo-stacey-milbern-scholarship" target="_blank"
+            class="s-btn">Learn More →</a>
         </div>
-
-      </div>
-
-      <div class="info-note">
-        📊 <strong>Note:</strong> Data can be collected on behalf of the office for students who have applied and were awarded scholarships through this newsletter.
+    
       </div>
     </div>
 
-    <!-- ══════════════ PRE-K – ELEMENTARY ══════════════ -->
-    <div class="section highlight animate-in">
-      <div class="grade-badge badge-green">🍎 Pre-K – Elementary</div>
-
-      <!-- Topic 1 -->
-      <h2>💕 Friendship, Belonging &amp; Inclusion</h2>
+    <!-- ================= HIGH SCHOOL SUCCESS HUB ================= -->
+    <div class="section high-school animate-in" style="--section-icon: '🎓';">
+      <div class="grade-badge badge-purple">🎓 High School</div>
+    
+      <h2>🎓 High School Success Hub</h2>
+    
+    
       <p class="section-intro">
-        <strong>Valentine's Month!</strong> February often brings classroom conversations about friendship. For children with disabilities, this is a key time to support peer relationships, social skills, and inclusion — especially for students who may feel left out or misunderstood.
+        High school is a new chapter filled with classes, opportunities, and responsibilities.
+        It can feel exciting, challenging, and sometimes overwhelming — and that’s completely normal.
       </p>
+    
+      <p>
+        If you have an <strong>IEP or 504 Plan</strong>, your supports are here to help you succeed.
+        High school is a place where you will grow, discover your strengths, and begin preparing
+        for your future.
+      </p>
+    
+      <p><strong>You belong here, and this journey is yours.</strong></p>
+    
+      <!-- 9th Grade -->
+      <h3>🌱 9th Grade: Start Strong</h3>
+      <p>
+        High school is a new beginning. This year is about learning how high school works
+        and building habits that help you stay organized and confident.
+      </p>
+    
+      <ul>
+        <li>Understanding your accommodations</li>
+        <li>Using a planner or tracking system</li>
+        <li>Asking for help early</li>
+        <li>Getting involved in a club or activity</li>
+      </ul>
+    
+      <!-- 10th Grade -->
+      <h3>🔭 10th Grade: Build Confidence</h3>
+      <p>
+        You’ve made it through freshman year. Now it’s time to build independence and
+        start thinking more about your interests and goals.
+      </p>
+    
+      <ul>
+        <li>Using supports without reminders</li>
+        <li>Checking your grades regularly</li>
+        <li>Exploring career interests</li>
+        <li>Setting academic goals</li>
+      </ul>
+    
+      <!-- 11th Grade -->
+      <h3>📚 11th Grade: Plan Your Path</h3>
+      <p>
+        Junior year is an important planning year. College, trade school, military service,
+        or entering the workforce are all valid options.
+      </p>
+    
+      <ul>
+        <li>Meeting graduation requirements</li>
+        <li>Researching postsecondary programs</li>
+        <li>Learning how accommodations work after high school</li>
+        <li>Practicing professional communication</li>
+      </ul>
+    
+      <!-- 12th Grade -->
+      <h3>🛣️12th Grade: Finish Strong</h3>
+      <p>
+        Senior year is about stepping into your future with confidence and understanding
+        how to access support after graduation.
+      </p>
+    
+      <ul>
+        <li>Completing applications (college, trade school, jobs)</li>
+        <li>Connecting with disability services (if attending college)</li>
+        <li>Finalizing your graduation plan</li>
+        <li>Continuing to advocate for yourself</li>
+      </ul>
+    </div>
 
+    <!-- ══════════════ MIDDLE SCHOOL ══════════════ -->
+    <div class="section purple animate-in" style="--section-icon: '🎒';">
+      
+      
+      <h2>🎒 Middle School Corner</h2>
+      
+      <p class="section-intro">
+        Middle school is a time of change. You’re learning new subjects, meeting new teachers,
+        and figuring out more about who you are.
+      </p>
+      
+      <p>
+        If you have an <strong>IEP or 504 Plan</strong>, your supports are tools to help you succeed.
+        This section is here to help you understand your strengths, build confidence,
+        and learn how to use your voice.
+      </p>
+      
+      <p>
+        Take your time exploring. Watch a video, read through a topic,
+        and discover tools that can support your learning and help you use your strengths.
+        <strong>You’ve got this — start exploring!</strong>
+      </p>
+      
+      <p><strong>February’s Recommendations — Middle School</strong></p>
+      
+      <!-- Topic 1 -->
+      <h3>🗣️ Self‑Advocacy & Understanding Supports</h3>
+      <p>
+        Middle school is when students begin taking more responsibility for their learning.
+        February is a great time to reinforce how and why supports exist and how to use them effectively.
+      </p>
+      
       <div class="video-grid">
-
         <div class="video-window wobble-hover">
           <div class="video-top-bar">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
-            <span class="video-label">🎬 Friendship &amp; Inclusion</span>
+            <span class="video-label">🎬 Self‑Advocacy</span>
           </div>
-          <iframe
-            src="https://www.youtube.com/embed/rvL4clmNQXQ"
-            title="Friendship and Inclusion"
-            allowfullscreen loading="lazy">
+          <iframe src="https://www.youtube.com/embed/DJYpe2DOMzk" title="Self‑Advocacy and Supports" allowfullscreen
+            loading="lazy">
           </iframe>
-          <div class="video-caption">💛 Friendship &amp; Inclusion</div>
+          <div class="video-caption">Understanding supports & speaking up</div>
         </div>
+      </div>
+      
+      <!-- Topic 2 -->
+      <h3>🤝 Friendship, Belonging & Social Inclusion</h3>
+      <p>
+        With Valentine’s Day and social activities, students may feel additional pressure
+        around friendships. Students with disabilities may face challenges with social cues,
+        peer acceptance, or confidence.
+      </p>
+      
+      <div class="video-grid">
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Friendship & Belonging</span>
+          </div>
+          <iframe src="https://www.youtube.com/embed/vRv7GAkfj4w" title="Friendship and Social Inclusion" allowfullscreen
+            loading="lazy">
+          </iframe>
+          <div class="video-caption">Building healthy friendships</div>
+        </div>
+      </div>
+      
+      <!-- Topic 3 -->
+      <h3>🧘 Stress, Anxiety & Emotional Regulation</h3>
+      <p>
+        Winter fatigue, academic pressure, and social stress can increase anxiety and emotional
+        overload—especially for students with disabilities.
+      </p>
+      
+      <div class="video-grid">
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Managing Stress</span>
+          </div>
+          <iframe src="https://www.youtube.com/embed/jGMjqIIMxNA" title="Stress and Emotional Regulation" allowfullscreen
+            loading="lazy">
+          </iframe>
+          <div class="video-caption">Understanding stress & emotions</div>
+        </div>
+      
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">📖 Mindfulness Resource</span>
+          </div>
+          <div class="pbs-card">
+            <div class="pbs-big-icon">🧘</div>
+            <p><strong>Mindfulness Practices to Help Kids Calm Down</strong></p>
+            <a href="https://leftbrainbuddha.com/mindfulness-practices-to-help-kids-calm-down/" target="_blank"
+              class="pbs-link-btn">
+              Read Article →
+            </a>
+          </div>
+          <div class="video-caption">Mindfulness tools for everyday stress</div>
+        </div>
+      </div>
+    </div>
 
+    <!-- ══════════════ PRE-K – ELEMENTARY ══════════════ -->
+    <div class="section highlight animate-in" style="--section-icon: '🦸';">
+
+      <h2>🦸 Super Learners Corner (Pre‑K – 5th)</h2>
+      
+      <p class="section-intro">
+        Welcome to Super Learners Corner!
+      </p>
+      
+      <p>
+        Every child learns in their own special way, and that’s what makes school amazing.
+        Some learners use pictures, some use movement, some use extra time, and some use tools
+        that help their brains focus. All of these are smart ways to learn.
+      </p>
+      
+      <p>
+        Here, you can explore fun topics, watch videos, and discover strategies that help you shine.
+        You’ll learn about friendship, feelings, using your tools, and celebrating your strengths.
+      </p>
+      
+      <p><strong>February’s Recommendations — Pre‑K & Elementary</strong></p>
+      
+      <!-- Topic 1 -->
+      <h3>💞 Friendship, Belonging & Inclusion</h3>
+      <p>
+        February often brings classroom conversations about friendship.
+        For young learners with disabilities, this is a key time to support
+        peer relationships, social skills, and inclusion—especially for children
+        who may feel left out or misunderstood.
+      </p>
+      
+      <div class="video-grid">
+      
+        <div class="video-window wobble-hover">
+          <div class="video-top-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="video-label">🎬 Friendship & Inclusion</span>
+          </div>
+          <iframe src="https://www.youtube.com/embed/rvL4clmNQXQ" title="Friendship and Inclusion" allowfullscreen
+            loading="lazy">
+          </iframe>
+          <div class="video-caption">Learning about friendship and belonging</div>
+        </div>
+      
         <div class="video-window wobble-hover">
           <div class="video-top-bar">
             <span class="dot dot-red"></span>
@@ -143,13 +484,15 @@
           </div>
           <div class="pbs-card">
             <div class="pbs-big-icon">📺</div>
-            <p><strong>Standing Up for Yourself &amp; Your Friends</strong></p>
-            <a href="https://www.pbs.org/video/standing-up-for-yourself-and-your-friends-zve4ma/"
-               target="_blank" class="pbs-link-btn">Watch on PBS Kids →</a>
+            <p><strong>Standing Up for Yourself and Your Friends</strong></p>
+            <a href="https://www.pbs.org/video/standing-up-for-yourself-and-your-friends-zve4ma/" target="_blank"
+              class="pbs-link-btn">
+              Watch on PBS Kids →
+            </a>
           </div>
-          <div class="video-caption">🦸 Standing Up for Friends</div>
+          <div class="video-caption">Supporting yourself and others</div>
         </div>
-
+      
         <div class="video-window wobble-hover">
           <div class="video-top-bar">
             <span class="dot dot-red"></span>
@@ -160,22 +503,24 @@
           <div class="pbs-card">
             <div class="pbs-big-icon">📺</div>
             <p><strong>Friendship</strong></p>
-            <a href="https://www.pbs.org/video/friendship-hpdtp3/"
-               target="_blank" class="pbs-link-btn">Watch on PBS Kids →</a>
+            <a href="https://www.pbs.org/video/friendship-hpdtp3/" target="_blank" class="pbs-link-btn">
+              Watch on PBS Kids →
+            </a>
           </div>
-          <div class="video-caption">🤝 All About Friendship</div>
+          <div class="video-caption">All about friendship</div>
         </div>
-
+      
       </div>
-
+      
       <!-- Topic 2 -->
-      <h2>🧠 Understanding Feelings &amp; Self-Regulation</h2>
-      <p class="section-intro">
-        Winter months and schedule changes can increase emotional dysregulation — especially for young children with sensory, communication, or emotional needs.
+      <h3>😊 Understanding Feelings & Self‑Regulation</h3>
+      <p>
+        Winter months and changes in routine can increase emotional dysregulation,
+        especially for young children with sensory, communication, or emotional needs.
       </p>
-
+      
       <div class="video-grid">
-
+      
         <div class="video-window wobble-hover">
           <div class="video-top-bar">
             <span class="dot dot-red"></span>
@@ -183,39 +528,34 @@
             <span class="dot dot-green"></span>
             <span class="video-label">🎬 Understanding Feelings</span>
           </div>
-          <iframe
-            src="https://www.youtube.com/embed/ZxfJicfyCdg"
-            title="Understanding Feelings"
-            allowfullscreen loading="lazy">
+          <iframe src="https://www.youtube.com/embed/ZxfJicfyCdg" title="Understanding Feelings" allowfullscreen
+            loading="lazy">
           </iframe>
-          <div class="video-caption">😊 Understanding Feelings</div>
+          <div class="video-caption">Recognizing and naming feelings</div>
         </div>
-
+      
         <div class="video-window wobble-hover">
           <div class="video-top-bar">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
-            <span class="video-label">🎬 Self-Regulation</span>
+            <span class="video-label">🎬 Self‑Regulation</span>
           </div>
-          <iframe
-            src="https://www.youtube.com/embed/bRkILioT_NA"
-            title="Self-Regulation"
-            allowfullscreen loading="lazy">
+          <iframe src="https://www.youtube.com/embed/bRkILioT_NA" title="Self Regulation" allowfullscreen loading="lazy">
           </iframe>
-          <div class="video-caption">🌈 Self-Regulation Tools</div>
+          <div class="video-caption">Tools to help calm our bodies and minds</div>
         </div>
-
+      
       </div>
-
+      
       <!-- Topic 3 -->
-      <h2>🌻 Learning Differences &amp; Strengths Awareness</h2>
-      <p class="section-intro">
-        February is a great time to normalize that everyone learns differently — helping children with disabilities develop a positive self-identity early on.
+      <h3>🌟 Learning Differences & Strengths Awareness</h3>
+      <p>
+        February is a great time to help children understand that everyone learns differently.
+        These lessons support positive self‑identity and confidence from an early age.
       </p>
-
+      
       <div class="video-grid">
-
         <div class="video-window wobble-hover">
           <div class="video-top-bar">
             <span class="dot dot-red"></span>
@@ -223,128 +563,15 @@
             <span class="dot dot-green"></span>
             <span class="video-label">🎬 Learning Differences</span>
           </div>
-          <iframe
-            src="https://www.youtube.com/embed/uSrA2c46l_U"
-            title="Learning Differences and Strengths"
-            allowfullscreen loading="lazy">
+          <iframe src="https://www.youtube.com/embed/uSrA2c46l_U" title="Learning Differences and Strengths" allowfullscreen
+            loading="lazy">
           </iframe>
-          <div class="video-caption">🌟 Everyone Learns Differently</div>
+          <div class="video-caption">Celebrating how everyone learns</div>
         </div>
-
       </div>
+      
     </div>
-
-    <!-- ══════════════ MIDDLE SCHOOL ══════════════ -->
-    <div class="section purple animate-in">
-      <div class="grade-badge badge-purple">🎒 Middle School</div>
-
-      <!-- Topic 1 -->
-      <h2>🗣️ Self-Advocacy &amp; Understanding Supports</h2>
-      <p class="section-intro">
-        Middle school is when students begin taking more responsibility for their learning. February is a good checkpoint to reinforce how and why supports exist — and how to use them appropriately.
-      </p>
-
-      <div class="video-grid">
-
-        <div class="video-window wobble-hover">
-          <div class="video-top-bar">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <span class="video-label">🎬 Self-Advocacy</span>
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/DJYpe2DOMzk"
-            title="Self-Advocacy"
-            allowfullscreen loading="lazy">
-          </iframe>
-          <div class="video-caption">💪 Self-Advocacy Skills</div>
-        </div>
-
-      </div>
-
-      <!-- Topic 2 -->
-      <h2>💞 Friendship, Belonging &amp; Social Inclusion</h2>
-      <p class="section-intro">
-        With Valentine's Day and social activities, students may feel pressure around friendships. Students with disabilities may struggle with social cues, peer acceptance, or confidence.
-      </p>
-
-      <div class="video-grid">
-
-        <div class="video-window wobble-hover">
-          <div class="video-top-bar">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <span class="video-label">🎬 Social Inclusion</span>
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/vRv7GAkfj4w"
-            title="Friendship and Social Inclusion"
-            allowfullscreen loading="lazy">
-          </iframe>
-          <div class="video-caption">🤝 Belonging &amp; Inclusion</div>
-        </div>
-
-      </div>
-
-      <!-- Topic 3 -->
-      <h2>😤 Stress, Anxiety &amp; Emotional Regulation</h2>
-      <p class="section-intro">
-        Winter fatigue, academic pressure, and social stress can increase anxiety and emotional overload — especially for students with disabilities.
-      </p>
-
-      <div class="video-grid">
-
-        <div class="video-window wobble-hover">
-          <div class="video-top-bar">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <span class="video-label">🎬 Stress &amp; Anxiety</span>
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/jGMjqIIMxNA"
-            title="Stress and Anxiety"
-            allowfullscreen loading="lazy">
-          </iframe>
-          <div class="video-caption">🧘 Managing Stress &amp; Anxiety</div>
-        </div>
-
-        <div class="video-window wobble-hover">
-          <div class="video-top-bar">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <span class="video-label">🧠 Mindfulness Article</span>
-          </div>
-          <div class="pbs-card">
-            <div class="pbs-big-icon">🧘</div>
-            <p><strong>Mindfulness Practices to Help Kids Calm Down</strong></p>
-            <a href="https://leftbrainbuddha.com/mindfulness-practices-to-help-kids-calm-down/"
-               target="_blank" class="pbs-link-btn">Read Article →</a>
-          </div>
-          <div class="video-caption">🌸 Mindfulness for Kids</div>
-        </div>
-
-      </div>
-
-      <!-- Topic 4 -->
-      <h2>📱 Safety Concerns with Technology</h2>
-      <p class="section-intro">
-        This section is growing! Apps, books, and digital safety tips will be added here soon to support students and families.
-      </p>
-
-      <div class="coming-soon">
-        <span class="coming-soon-icon">🚧</span>
-        <div>
-          <strong>More Resources Coming Soon!</strong><br>
-          Apps, books, and online safety tips will be added to expand this section in a future issue.
-        </div>
-      </div>
-
-    </div>
-
+    
     <!-- ══════════════ FOOTER ══════════════ -->
     <div class="footer">
       <div class="footer-stars">⭐ 🌵 ⭐ 🌞 ⭐ 🌵 ⭐</div>
